@@ -21,4 +21,7 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/member', [App\Http\Controllers\MemberController::class, 'index'])->name('member');
+Route::get('/blog', [App\Http\Controllers\BlogController::class, 'index'])->name('blog');
+Route::get('/addblog', [App\Http\Controllers\BlogController::class, 'addblog'])->name('addblog');
+Route::post('/saveblog', [App\Http\Controllers\BlogController::class, 'saveblog'])->name('saveblog');
 //Route::get('/login', [App\Http\Controllers\HomeController::class, 'login'])->name('login');
