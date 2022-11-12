@@ -53,6 +53,19 @@
                             </div>
                         </div>
 
+                        <div class="row mb-3">
+                            <label for="description" class="col-md-4 col-form-label text-md-end">{{ __('Blog') }}</label>
+
+                            <div class="col-md-6">
+                                <textarea id="blog"  class="form-control @error('blog') is-invalid @enderror" name="blog" required ></textarea>
+
+                                @error('blog')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
                         
                         <div class="row mb-0">
                             <div class="col-md-6 offset-md-4">
